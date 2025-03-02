@@ -1,0 +1,160 @@
+/* Reset styling agar margin dan padding tidak mengganggu layout */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+/* Styling untuk navbar */
+.navbar {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 10px 20px;
+  color: white;
+}
+
+/* Styling untuk logo */
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.nav-logo, .website-title {
+    margin-right: 10px;
+}
+
+.website-title {
+    text-decoration: none; /* Menghilangkan garis bawah pada link */
+}
+
+
+.logo a {
+  font-size: 24px;
+  color: white;
+  text-decoration: none;
+}
+
+.logo img {
+    height: 40px; /* Sesuaikan ukuran logo */
+    width: 40px;  /* Pastikan width dan height sama */
+    border-radius: 50%; /* Membuat lingkaran */
+    object-fit: cover; /* Memastikan gambar tetap proporsional */
+    margin-top: 0px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 18px;
+  padding: 5px 10px;
+}
+
+.nav-links a:hover {
+  background-color: #2f44ca;
+  border-radius: 5px;
+}
+
+.nav-links.active {
+    display: block; /* Menampilkan menu saat tombol hamburger diklik */
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    background-color: white;
+    height: 2px;
+    width: 25px;
+    margin: 5px 0;
+}
+
+
+section {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  font-size: 70px;
+}
+
+#home {
+  background: pink;
+  color: aliceblue;
+}
+
+#about {
+  background: green;
+  color: aqua;
+}
+
+#konten {
+  background: yellow;
+  color: black;
+}
+
+#contact {
+  background: yellowgreen;
+  color: blueviolet;
+}
+
+h1 {
+  font-size: 4rem;
+  top: 180px;
+}
+
+img {
+  width: 300px;
+  height: 400px;
+  margin-top: 30px;
+}
+
+video {
+  margin-top: 30px;
+}
+
+audio {
+  margin-top: 30px;
+}
+
+/* Untuk tampilan mobile */
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+    
+    .nav-links {
+        display: none; /* Sembunyikan menu di awal */
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #333;
+        text-align: center;
+    }
+    
+    .nav-links li {
+      margin: 20px 0;
+  }
+}

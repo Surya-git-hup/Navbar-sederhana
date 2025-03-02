@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Navbar</title>
+    <link rel="stylesheet" href="Navbar.css">
+  </head>
+  <body>
+    
+<!--     - Navigation bar container -->
+    <nav class="navbar">
+    
+<!--     <!- Logo / nama website -->
+      <div class="logo">
+        <img src="Img/logo.jpg" alt="logo" class="nav-logo">
+        <a href="#" class="website-title">My Website</a>
+      </div>
+    
+<!--     <!- Tombol Hamburger untuk ukuran kecil -->
+      <div class="menu-toggle" id="menu-toggle">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    
+  <!--   <!- Daftar menu navigation bar → -->
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#konten">Konten</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    
+<!--      <!-Bagian dari isi→ -->
+    <section id="home">
+      <center>
+        <h1>Bagian Home</h1>
+        <img src="Img/70fdc0adb7758df6a8596a6d34a8533c.jpg" alt="Ear">
+      </center>
+    </section>
+    <section id="konten">
+      <center>
+        <h1>Bagian Konten</h1>
+        <video width="280" height="500" controls="">
+          <source src="Video/ssstik.io_@chiww0_1740489746067.mp4"
+          type="video/mp4">
+        </video>
+      </center>
+    </section>
+    <section id="about">
+      <center>
+        <h1>Bagian About</h1>
+        <audio controls="">
+          <source src="Music/Komang - Raim Laode.mp3" type="audio/mpeg">
+        </audio>
+      </center>
+    </section>
+    <section id="contact">Bagian Contact</section>
+    
+    <script>
+    // Menangani klik pada menu hamburger
+    const menuToggle = document.getElementById("menu-toggle");
+    const navLinks = document.getElementById("nav-links");
+    
+    // Ketika tombol hamburger diklik, toggle kelas 'active' untuk menampilkan menu
+    menuToggle.addEventListener("click", function() {
+        navLinks.classList.toggle("active");
+      });
+        
+    </script>
+    
+  </body>
+</html>
